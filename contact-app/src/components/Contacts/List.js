@@ -6,13 +6,14 @@ import Item from './Item'
 
 function List() {
   const contacts = useSelector(contactSelectors.selectAll)
-  console.log(contacts)
+  
   return (
-    <div>
+    
+    <ul className='list'>
     {
-        contacts.map(contact => (<Item key={contact.id} item={contact} />))
+        contacts.map(contact => <li key={contact.id} className='list__item'><Item key={contact.id} item={contact} /></li>)
     }
-    </div>
+    </ul>
   )
 }
 
