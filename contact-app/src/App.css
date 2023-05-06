@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Sans+Pro&display=swap');
+
+*{
+  margin: 0%;
+  padding: 0;
+  box-sizing: border;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 100vh;
+}
+
+h1{
+  text-align: center;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+form input{
+  margin-bottom:0.5rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+}
+
+form button{
+  width: 100px;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.3rem;
+
+}
+
+form button:active{
+  transform: scale(1.05);
+}
+
+.container{
+  width: 600px;
+  padding: 2rem;
+  background-color: lightskyblue;
+  border-radius: 0.3rem;
+}
+
+.list{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.list__item{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  background-color: lightgoldenrodyellow;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.delete{
+  margin-left: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: lightseagreen;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.delete__all{
+  cursor: pointer;
+}
+
+.edit__btn{
+  background-color: lightcoral;
+  color: #fff;
+  border-radius: 0.3rem;
+  padding: 0.4rem 1rem;
+  border: none;
+  cursor: pointer;
+  margin-left: 2rem;
+  text-decoration: none;
+}
