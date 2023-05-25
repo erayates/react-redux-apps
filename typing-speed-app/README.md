@@ -1,7 +1,7 @@
 
 # Typing Speed App
 
-Bu projede, gelen kelimeleri 1 dakika içinde en hızlı şekilde yazmaya çalışaracak 10 parmak yazma hızını geliştirip kendinizi test edebilirsiniz.
+Bu projede, gelen kelimeleri 1 dakika içinde en hızlı şekilde yazmaya çalışarak 10 parmak yazma hızını geliştirip kendinizi test edebilirsiniz.
 
 Bu uygulama React,Redux ve MUI kullanılarak geliştirilmiştir.
 
