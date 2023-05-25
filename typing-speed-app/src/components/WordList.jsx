@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { Box } from '@chakra-ui/react'
 import { useSelector } from 'react-redux'
 import { Chip } from '@mui/material'
 
