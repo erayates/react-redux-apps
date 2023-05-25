@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
-import { Chip } from '@mui/material'
+import { Chip,Box } from '@mui/material'
 
 function WordList() {
   const [wordShown, setWordShown] = useState(20)
