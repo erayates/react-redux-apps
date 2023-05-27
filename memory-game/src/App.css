@@ -1,0 +1,26 @@
+.card-back{
+  display: none;
+}
+
+.card.flipped{
+  transition: transform 0.8s;
+  transform: rotate3d(0, 1, 0, 180deg);
+}
+
+.card.flipped > .card-inner{
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  transform: rotate3d(0, 1, 0, 180deg);
+}
+.card{
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped > .card-inner > .card-front{
+  display: none;
+}
+
+.card.flipped > .card-inner > .card-back{
+  display: block;
+}

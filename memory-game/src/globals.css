@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card{
+    @apply h-[200px] flex items-center justify-center shadow-lg rounded-lg cursor-pointer
+}
+
+/**************************
+        RESULT
+***************************/
+
+.result::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120vh;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1;
+
+}
+
+.result{
+    @apply absolute top-0 left-0 flex items-center justify-center h-full w-full
+}
+
+.result__content{
+    @apply bg-white z-20 p-12 rounded-lg
+}
+
+.result__title{
+    @apply text-2xl  uppercase
+}
+
+.result__subtitle{
+    @apply text-xl font-medium text-green-400
+}
+
+.result__text{
+    @apply text-lg mb-2 text-gray-500 mt-4
+}
+
+.result__button{
+    @apply bg-blue-500 text-white px-4 py-2 rounded-lg text-[14px] font-semibold
+}
+
+.result__button:hover{
+    @apply bg-blue-600
+}
+
+
+/**************************
+        HEADER
+***************************/
+.header{
+    @apply bg-white py-6 sm:py-6 font-poppins
+}
+
+.header__container{
+    @apply mx-auto max-w-2xl lg:text-center px-6 lg:px-8
+}
+
+.header__title{
+    @apply text-base font-semibold leading-7 text-indigo-600
+}
+

@@ -1,35 +1,61 @@
 import React, { useEffect } from 'react'
-import { useDispatch,useSelector } from 'react-redux'
-import { selectCards, setCards } from '../store/cardsSlice'
-import { AiOutlineQuestion } from 'react-icons/ai'
+import { useDispatch, useSelector } from 'react-redux'
+import { matchCards, setCards, addPoint, deletePoint, setFinish } from '../store/cardsSlice'
+import CardItem from './CardItem'
+
 
 const GameBoard = () => {
+
     const dispatch = useDispatch();
+
+    const { flippedCards, cards, matchedCards, loading } = useSelector(state => state.cards)
+
+
+    useEffect(() => {
+        if(flippedCards.length === 2) {
+            dispatch(matchCards());
+            if (flippedCards[0].name !== flippedCards[1].name) {
+                setTimeout(() => {
+                    flippedCards.forEach((card) => {
+                        document.querySelector(`[data-id="${card.id}"]`).classList.remove('flipped')
+                    })
+                }, 1000)
+                dispatch(deletePoint());
+            } else {
+                dispatch(addPoint());
+            }
+        }
+    }, [flippedCards])
+
+    useEffect(() => {
+        matchedCards.forEach((card) => {
+            document.querySelector(`[data-id="${card.id}"]`).classList.add('flipped')
+        })
+        matchedCards.length === cards.length && cards.length > 0 && dispatch(setFinish());
+    }, [matchedCards])
+
+
     useEffect(() => {
         dispatch(setCards())
     }, [])
 
-    const cards = useSelector(selectCards)
-
-
-
     return (
-        <div className='gameboard grid grid-cols-5 gap-4'>
-            {
-                cards.map((card) => {
-                    return (
-                        <div className='card h-[200px] flex items-center justify-center shadow-lg rounded-lg'>
-                            <div className='card-inner'>
-                                <div className='card-front'>
-                                    <AiOutlineQuestion fontSize={72} className='text-red-200'/>
-                                </div>
-                            </div>
-                        </div>
-                    )
-                })
-            }
+        <>
+            {loading && <p className='text-center text-4xl font-semibold uppercase'>Loading...</p>}
+            {!loading && (
+                <div className='gameboard grid grid-cols-5 gap-4'>
+                    {
+                        cards.map((card, idx) => {
+                            return (
+                                <CardItem card={card} idx={idx} />
+                            )
+                        })
+                    }
 
-        </div>
+                </div>
+            )}
+
+        </>
     )
 }
 
