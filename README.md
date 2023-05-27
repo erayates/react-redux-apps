@@ -25,3 +25,15 @@ https://typing-speed-app-ea.vercel.app/
 ![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/24e7k4p.png)
 ![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/7nqtodc.png)
 ![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/a2rz9d1.png)
+
+## Memory Game
+### Demo
+
+Uygulamanın canlı önizlemesine aşağıda bağlantıdan ulaşabilirsin:
+
+[https://typing-speed-app-ea.vercel.app/](https://memory-game-ea.vercel.app/)
+
+## Ekran Görüntüleri
+
+![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/84lytp6.png)
+![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/emrc9t9.png)
