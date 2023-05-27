@@ -5,14 +5,12 @@ import CardItem from './CardItem'
 
 
 const GameBoard = () => {
-
     const dispatch = useDispatch();
 
     const { flippedCards, cards, matchedCards, loading } = useSelector(state => state.cards)
 
-
     useEffect(() => {
-        if(flippedCards.length === 2) {
+        if (flippedCards.length === 2) {
             dispatch(matchCards());
             if (flippedCards[0].name !== flippedCards[1].name) {
                 setTimeout(() => {
@@ -41,9 +39,9 @@ const GameBoard = () => {
 
     return (
         <>
-            {loading && <p className='text-center text-4xl font-semibold uppercase'>Loading...</p>}
+            {loading && <p className='loading'>Loading...</p>}
             {!loading && (
-                <div className='gameboard grid grid-cols-5 gap-4'>
+                <div className='gameboard'>
                     {
                         cards.map((card, idx) => {
                             return (
@@ -51,7 +49,6 @@ const GameBoard = () => {
                             )
                         })
                     }
-
                 </div>
             )}
 

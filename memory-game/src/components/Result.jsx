@@ -4,7 +4,6 @@ import { resetGame } from '../store/cardsSlice'
 
 const Result = () => {
     const { score } = useSelector(state => state.cards)
-    const dispatch = useDispatch();
     const handleClick = () => {
         window.location.reload();
     }

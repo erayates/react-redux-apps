@@ -64,7 +64,50 @@
     @apply mx-auto max-w-2xl lg:text-center px-6 lg:px-8
 }
 
-.header__title{
+.header__welcome{
     @apply text-base font-semibold leading-7 text-indigo-600
 }
 
+.header__title{
+    @apply mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl
+}
+
+.header__subtitle{
+    @apply mt-6 text-lg leading-8 text-gray-600
+}
+
+
+/*************************
+        LOADING
+**************************/
+.loading{
+    @apply text-center text-4xl font-semibold uppercase
+}
+
+
+/*************************
+        GAMEBOARD
+**************************/
+.gameboard{
+    @apply  grid grid-cols-5 gap-4
+}
+
+
+/*************************
+        SCOREBOARD
+**************************/
+.score-board{
+    @apply w-[300px] absolute left-[20px] top-[20px] rounded-lg shadow-xl font-poppins p-4
+}
+
+.score-board__title{
+    @apply  text-xl font-semibold text-red-400
+}
+
+.score-board__subtitle{
+    @apply text-sm text-gray-400 text-[14px] my-3
+}
+
+.score-board__button{
+    @apply bg-red-400 text-white px-4 py-2 rounded-lg mt-4
+}

@@ -11,11 +11,11 @@ const ScoreBoard = () => {
     }
 
     return (
-        <div className='score-board w-[300px]  absolute left-[20px] top-[20px] rounded-lg shadow-xl font-poppins p-4' >
-            <h3 className=' text-xl font-semibold text-red-400'>Rules</h3>
-            <p className='text-sm text-gray-400 text-[14px] my-3'><BsInfoCircle className='inline-block' /> Click on the cards to flip them over. If you find two cards with the same image, you get 50 points, otherwise you lose 10 points.</p>
+        <div className='score-board'>
+            <h3 className='score-board__title'>Rules</h3>
+            <p className='score-board__subtitle'><BsInfoCircle className='inline-block' /> Click on the cards to flip them over. If you find two cards with the same image, you get 50 points, otherwise you lose 10 points.</p>
             <p>Your Score: {score}</p>
-            <button className='bg-red-400 text-white px-4 py-2 rounded-lg mt-4' onClick={handleClick}>Reset Game</button>
+            <button className='score-board__button' onClick={handleClick}>Reset Game</button>
         </div>
     )
 }

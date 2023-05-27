@@ -14,7 +14,6 @@ const CardItem = ({card,idx}) => {
         }
     }
 
-
     return (
         <div key={idx} data-id={card.id} className='card' onClick={(e) => handleCardClick(e, card)}>
             <div className='card-inner z-0' onClick={(e) => e.stopPropagation()}>
